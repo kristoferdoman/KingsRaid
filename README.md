@@ -1,4 +1,4 @@
-# KingsRaid
+# King's Raid
 
 **About**
 
@@ -33,3 +33,44 @@ This is a good question.  This is helpful for several reasons.
 5. Profit!
 
 Patches welcome.  Do not use the experimental macros unless you know what you're doing, or maybe you want to help me develop them.  That's just my testbed for new ideas.
+
+
+## MEmu
+
+I edited and used what was done by @cppisking to quickly make a working version for MEmu users. It's still very much a rough draft. But, with that being said, **raid leader**, and **raid member**, macro generators should be working perfectly if you use the default screen resolution in MEmu. I haven't tested with any other settings. There's also a directory permission setting you need to have full access to, to allow the script generator to write to the MEmu script directory. 
+
+### Instructions
+
+1. Click [here](https://github.com/kristoferdoman/KingsRaid/archive/master.zip) to download the zipped files
+  * Unzip the files 
+
+2. Install [Python 3.5 or higher](https://www.python.org/).  Just because 2.7 works now, doesn't mean it will in the future!  I plan to break support for Python 2.  Use Python 3.
+
+3. Navigate to where you've installed MEmu, the default location should be: **C:\Program Files\Microvirt\MEmu**
+  * right click on the scripts folder
+  * select properties from the context menu 
+  * click the security tab along the top
+  * click edit to change the permissions
+  * click the group or username with which you are associated
+  * make sure the full control check box in the bottom is checked
+  * click apply 
+  
+4. Open MEmu and create a macro for **Raid Member**, and **Raid Leader** with anything in it
+  * open the settings for each macro and check unlimited playback 
+  * we're going to use these macro placeholders to place our macros we generate 
+ 
+5. Double click `krng.memu.py` in the location where you've unzipped the files
+
+6. Follow the instructions
+
+
+### Example 
+
+Here's the settings which I know work for sure right now: 
+  * screen resolution, press enter
+  * choose option 2 (Raid Member) or 3 (Raid Leader) 
+    * option 1 and 4 haven't been implemented yet
+  * choose the macro you'd like to overwrite 
+
+
+**Note:** I will eventually clean up the code so it's more maintainable, and easier to edit, and more object oriented.
